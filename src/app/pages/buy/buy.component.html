@@ -1,0 +1,50 @@
+<h3 class="center" [ngClass]="{'premium': premiumUserService.loggedInUser.isPremium}">Jegyvásárlás</h3>
+<p class="center" [ngClass]="{'premium': premiumUserService.loggedInUser.isPremium}"> Jegyvásárlás {{date | validDate}} napra</p>
+<p *ngIf="unsuccess" class="center warning">Nincs minden adat megadva!</p>
+<div class="center login">
+  <form [formGroup]="buyForm" (ngSubmit)="search()">
+    <div>
+      <label for="city">Honnan</label>
+      <select type="text" formControlName="honnan">
+        <option *ngFor="let option of options" [value]="option">{{ option }}</option>
+      </select>
+    </div>
+    <div>
+      <label for="city">Hova</label>
+      <select type="text" formControlName="hova">
+        <option *ngFor="let option of options" [value]="option">{{ option }}</option>
+      </select>
+    </div>
+    <div>
+      <div><label for="db" [ngClass]="{'premium': premiumUserService.loggedInUser.isPremium}">Jegyek száma</label><input type="number" formControlName="db" /></div>
+    </div>
+    <div>
+      <button type="submit">Keresés</button>
+      <button [routerLink]="'/main'">Vissza</button>
+    </div>
+  </form>
+</div>
+<div *ngIf="showable">
+  <table>
+    <thead>
+      <tr>
+        <th class="center" [ngClass]="{'premium': premiumUserService.loggedInUser.isPremium}">Indulás</th>
+        <th class="center" [ngClass]="{'premium': premiumUserService.loggedInUser.isPremium}">Honnan</th>
+        <th class="center" [ngClass]="{'premium': premiumUserService.loggedInUser.isPremium}">Hova</th>
+        <th class="center" [ngClass]="{'premium': premiumUserService.loggedInUser.isPremium}">Férőhelyek</th>
+        <th class="center" [ngClass]="{'premium': premiumUserService.loggedInUser.isPremium}">Ár</th>
+        <th class="center"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let jarat of jaratok">
+        <td [ngClass]="{'premium': premiumUserService.loggedInUser.isPremium}">{{ jarat.indul }}</td>
+        <td [ngClass]="{'premium': premiumUserService.loggedInUser.isPremium}">{{ jarat.honnan }}</td>
+        <td [ngClass]="{'premium': premiumUserService.loggedInUser.isPremium}">{{ jarat.hova }}</td>
+        <td [ngClass]="{'premium': premiumUserService.loggedInUser.isPremium}">{{ jarat.ar }}</td>
+        <td [ngClass]="{'premium': premiumUserService.loggedInUser.isPremium}">{{ jarat.helyek }}</td>
+        <td><button (click)="buy(jarat)">Vásárlás</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

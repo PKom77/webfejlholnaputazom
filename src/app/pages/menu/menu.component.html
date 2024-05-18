@@ -1,0 +1,8 @@
+<nav class="navbar">
+  <ul class="nav-list">
+    <li class="nav-item center"><a class="nav-link" (click)="menuItemClicked('main')" [ngClass]="{'premium': premiumUserService.loggedInUser.isPremium}">Főoldal <mat-icon aria-hidden="false" aria-label="Főoldal" fontIcon="home"></mat-icon></a></li>
+    <li class="nav-item center"><a class="nav-link" (click)="menuItemClicked('login')" [ngClass]="{'premium': premiumUserService.loggedInUser.isPremium}">{{ this.userService.loggedInUser.logged ? 'Profilom' : 'Bejelentkezés' }} <mat-icon aria-hidden="false" aria-label="Főoldal" fontIcon="assignment"></mat-icon></a></li>
+    <li class="nav-item center"><a class="nav-link" (click)="menuItemClicked('buy')" [ngClass]="{'premium': premiumUserService.loggedInUser.isPremium}">Jegyvásárlás <mat-icon aria-hidden="false" aria-label="Főoldal" fontIcon="flight_takeoff"></mat-icon></a></li>
+    <li class="nav-item center"><a class="nav-link" (click)="menuItemClicked('tickets')" [ngClass]="{'premium': premiumUserService.loggedInUser.isPremium}">Jegyeim <mat-icon aria-hidden="false" aria-label="Főoldal" fontIcon="list"></mat-icon></a></li>
+  </ul>
+</nav>

@@ -1,1 +1,251 @@
-/* You can add global styles to this file, and also import other style files */
+.premium {
+  color: rgb(0 255 94) !important;
+}
+
+html {
+  background-color: rgb(150 150 150) !important;
+  margin: 0 !important;
+}
+
+body {
+  margin: 0 !important;
+}
+
+button {
+  height: 2vw !important;
+  font-size: 1vw !important;
+  color: rgb(30 123 219) !important;
+  background-color: whitesmoke !important;
+  border: 0vw !important;
+  text-shadow: 0.1vw 0.1vw royalblue !important;
+}
+
+h3 {
+  margin-top: 2vw !important;
+  font-size: 1.5vw !important;
+  text-shadow: 0.1vw 0.1vw royalblue !important;
+  color: rgb(250, 255, 0) !important;
+}
+
+p {
+  font-size: 1.2vw !important;
+  line-height: 1.5 !important;
+  text-shadow: 0.1vw 0.1vw royalblue !important;
+  color: rgb(250, 255, 0) !important;
+  margin: 0.5vw 5.5vw 0.5vw 5.5vw !important;
+}
+
+.center {
+  text-align: center !important;
+}
+
+.italic {
+  font-style: italic !important;
+}
+
+.login {
+  border-radius: 1vw !important;
+  border: 0.3vw dashed rgb(250, 255, 0) !important;
+  margin: 2vw 25% 2vw 25% !important;
+  font-size: 2vw !important;
+  margin-bottom: 10vw !important;
+  width: 50% !important;
+}
+
+label {
+  font-size: 1.2vw !important;
+  text-align: center !important;
+  font-variant: small-caps !important;
+  max-width: fit-content !important;
+  text-shadow: 0.1vw 0.1vw royalblue !important;
+  color: rgb(250, 255, 0) !important;
+}
+
+label:first-letter {
+  font-size: 2.5vw !important;
+}
+
+input {
+  color: white !important;
+  border: none !important;
+  font-size: 1vw !important;
+  border-radius: 2vw !important;
+  display: block !important;
+  margin: 0.5vw auto !important;
+  width: 50% !important;
+  background-color: rgb(255 156 0) !important;
+  padding: 0.5vw !important;
+}
+
+.login button {
+  color: white !important;
+  border: none !important;
+  font-size: 1vw !important;
+  border-radius: 2vw !important;
+  display: block !important;
+  margin: 1vw auto !important;
+  width: 20% !important;
+  background-color: rgb(242, 173, 0) !important;
+  padding: 0.5vw !important;
+}
+
+.login select {
+  color: white !important;
+  border: none !important;
+  font-size: 1vw !important;
+  border-radius: 2vw !important;
+  display: block !important;
+  margin: 0.5vw auto !important;
+  width: 50% !important;
+  background-color: rgb(255 156 0) !important;
+  padding: 0.5vw !important;
+}
+
+.warning {
+  color: rgb(0 255 255) !important;
+}
+
+nav {
+  width: 100% !important;
+  height: auto !important;
+  background-color: rgb(255 161 0) !important;
+  overflow: hidden !important;
+  z-index: 1 !important;
+}
+
+nav ul {
+  list-style-type: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+nav li {
+  float: left !important;
+  text-align: center !important;
+  width: 25% !important;
+  font-size: 1.5vw !important;
+}
+
+nav a {
+  text-decoration: none !important;
+  color: white !important;
+  text-shadow: 0.2vw 0.2vw royalblue !important;
+  padding: 0.6vw !important;
+  display: block !important;
+  transition: 0.6s !important;
+  font-weight: bold !important;
+  text-transform: uppercase !important;
+  border-bottom: 0.2vw whitesmoke solid !important;
+  border-top: 0.2vw whitesmoke solid !important;
+}
+
+nav a:hover {
+  background-color: white !important;
+  color: rgb(34, 0, 78) !important;
+  text-shadow: 0.2vw 0.2vw royalblue !important;
+}
+
+header {
+  padding: 0.5vw 0.5vw 0.5vw 0.5vw !important;
+  background-image: url('/assets/media/bus.png') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  height: auto !important;
+}
+
+header > * {
+  margin-block-start: 0 !important;
+  margin-block-end: 1vw !important;
+  text-shadow: 0.1vw 0.1vw orange !important;
+  color: rgb(30 123 219) !important;
+}
+
+header div {
+  background-color: rgba(0, 0, 0, 0.6) !important;
+}
+
+header h1 {
+  margin: 0.5vw 25.5vw 0.5vw 25.5vw !important;
+  font-size: 3vw !important;
+  text-transform: uppercase !important;
+  padding-top: 1vw !important;
+}
+
+header h2 {
+  font-style: italic !important;
+  font-size: 2vw !important;
+  padding-top: 1vw !important;
+  padding-bottom: 0.5vw !important;
+  margin: 0.5vw 30.5vw 0.5vw 30.5vw !important;
+}
+
+footer {
+  background-color: rgb(255 161 0) !important;
+  text-align: center !important;
+  border-top: 0.2vw whitesmoke solid !important;
+  position: fixed !important;
+  bottom: 0 !important;
+  width: 100% !important;
+  color: white !important;
+  font-size: 1.5vw !important;
+}
+
+table, th, td {
+  text-align: left !important;
+  font-size: 2vw !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  border-collapse: collapse !important;
+  padding: 0.6vw !important;
+  margin-bottom: 5vw !important;
+  border-left: 0.2vw whitesmoke solid !important;
+  border-right: 0.2vw whitesmoke solid !important;
+  color: whitesmoke !important;
+  text-shadow: 0.2vw 0.2vw royalblue !important;
+  border: 0.2vw whitesmoke solid !important;
+}
+
+td:first-child {
+  width: 10vw !important;
+  text-align: center !important;
+}
+
+td:nth-child(2) {
+  width: 20vw !important;
+  text-align: center !important;
+}
+
+td:nth-child(3) {
+  width: 20vw !important;
+  text-align: center !important;
+}
+
+td:nth-child(4) {
+  width: 5vw !important;
+  text-align: center !important;
+}
+
+th {
+  background-color: rgb(255 167 0) !important;
+}
+
+tr:nth-child(even) {
+  background-color: rgb(255 167 0) !important;
+}
+
+tr:last-child {
+  border-bottom: 0.2vw whitesmoke solid !important;
+}
+
+tr:nth-child(odd) {
+  background-color: rgb(255, 200, 9) !important;
+}
+
+
+.divider {
+  margin-bottom: 5vw !important;
+  font-size: 1.2vw !important;
+  line-height: 1.5 !important;
+  text-shadow: 0.1vw 0.1vw royalblue !important;
+  color: rgb(250, 255, 0) !important;
+}

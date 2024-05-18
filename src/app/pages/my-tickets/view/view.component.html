@@ -1,0 +1,13 @@
+<h3 class="center" [ngClass]="{'premium': premiumUserService.loggedInUser.isPremium}">Aztaa {{this.userService.loggedInUser.name}} utazik! {{ premiumUserService.loggedInUser.isPremium ? 'És ráadásul Prémium user jelenleg!!' : 'Egy kis hétköznapi utacskára.' }}</h3>
+<mat-progress-bar mode="query"></mat-progress-bar>
+<p class="center" [ngClass]="{'premium': premiumUserService.loggedInUser.isPremium}">{{ premiumUserService.loggedInUser.isPremium ? 'EZT A MEGAPRÉMIUM UTAT' : 'Az utat' }} {{mikor}}-kor kezdi meg.</p>
+<p class="center" [ngClass]="{'premium': premiumUserService.loggedInUser.isPremium}">{{ (mennyi == '1') ? 'Egyedül a legjobb, ezért' : 'Nagyon szereti a társaságot, ezért' }} {{mennyi}} jegyet vett {{ar}} forintért.</p>
+<mat-progress-bar mode="query"></mat-progress-bar>
+<p class="center" [ngClass]="{'premium': premiumUserService.loggedInUser.isPremium}">{{ premiumUserService.loggedInUser.isPremium ? 'A PRÉMUIM ÚT ITT KEZDŐDIK:' : 'Kiinduló állomás:' }} {{honnan}}.</p>
+<p class="center" [ngClass]="{'premium': premiumUserService.loggedInUser.isPremium}">{{ premiumUserService.loggedInUser.isPremium ? 'A PRÉMUIM ÚT ITT FEJEZŐDIK BE:' : 'Érkező állomás:' }} {{hova}}.</p>
+<mat-progress-bar mode="query"></mat-progress-bar>
+<div class="center login">
+  <button (click)="useTicket()">Beváltás</button>
+  <button [routerLink]="'/tickets'">Vissza</button>
+</div>
+

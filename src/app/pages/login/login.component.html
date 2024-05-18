@@ -1,0 +1,48 @@
+<div class=""  [ngClass]="{'premium': premiumUserService.loggedInUser.isPremium}">
+  <h3 class="center" [ngClass]="{'premium': premiumUserService.loggedInUser.isPremium}">{{ userService.loggedInUser.logged ? 'Profilom' : 'Bejelentkezés' }}</h3>
+  <div [ngClass]="{'premium': premiumUserService.loggedInUser.isPremium}" class="center login">
+    <form [formGroup]="loginForm">
+      <ng-container *ngIf="userService.loggedInUser.logged; else loginTemplate">
+        <span>
+          <label [ngClass]="{'premium': premiumUserService.loggedInUser.isPremium}">Email: {{ userService.loggedInUser.email }}<br /></label>
+        </span>
+        <span>
+          <label [ngClass]="{'premium': premiumUserService.loggedInUser.isPremium}">Alapértelmezett város: {{ userService.loggedInUser.city }}<br /></label>
+        </span>
+        <span>
+          <label [ngClass]="{'premium': premiumUserService.loggedInUser.isPremium}">Név: {{ userService.loggedInUser.name }}</label>
+        </span>
+      </ng-container>
+
+      <ng-template #loginTemplate>
+        <span>
+          <label for="email">Email</label>
+          <input type="text" formControlName="email" />
+        </span>
+        <span>
+          <label for="password">Jelszó</label>
+          <input type="password" formControlName="password" />
+        </span>
+      </ng-template>
+
+      <span>
+        <button [ngClass]="{'premium': premiumUserService.loggedInUser.isPremium}" type="button" (click)="userService.loggedInUser.logged ? logout() : login()">
+          {{ userService.loggedInUser.logged ? 'Kijelentkezés' : 'Bejelentkezés' }}
+        </button>
+        <ng-container *ngIf="userService.loggedInUser.logged">
+          <button [ngClass]="{'premium': premiumUserService.loggedInUser.isPremium}" type="button" (click)="premiumUser()">
+            {{ premiumUserService.loggedInUser.isPremium ? 'Prémum ON' : 'Prémium OFF' }}
+          </button>
+        </ng-container>
+        <ng-container *ngIf="userService.loggedInUser.logged">
+          <button [ngClass]="{'premium': premiumUserService.loggedInUser.isPremium}" type="button" (click)="deleteUser()">
+            Profil törlése
+          </button>
+        </ng-container>
+        <ng-container *ngIf="!userService.loggedInUser.logged">
+          <button [ngClass]="{'premium': premiumUserService.loggedInUser.isPremium}" type="button" [routerLink]="'/login/register'">Regisztráció</button>
+        </ng-container>
+      </span>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,50 @@
+<h3 [ngClass]="{'premium': premiumUserService.loggedInUser.isPremium}" class="center">Üdvözlünk a HolnapUtazom oldalán! {{ premiumUserService.loggedInUser.isPremium ? 'Mr./Mrs. ' + premiumUserService.loggedInUser.name : '' }}</h3>
+<div class="center italic">
+  <p [ngClass]="{'premium': premiumUserService.loggedInUser.isPremium}" appSelect>
+    Örömünkre szolgál, hogy felkereste oldalunkat! <a appHighlight>
+      Missziónk önnek olcsó, átszállás nélküli utat biztosítani
+      másnapra.
+    </a> Felmerül a kérdés, hogy miért másnapra... a válasz egyszerű: mindenki egyenlő eséllyel
+    foglalhat, nincs earlybird.
+  </p>
+  <p [ngClass]="{'premium': premiumUserService.loggedInUser.isPremium}" appSelect>
+    Cégünk büszkén kínál magas színvonalú és megbízható autóbuszos szolgáltatásokat belföldi és nemzetközi utazásokhoz.
+    Küldetésünk, hogy kényelmes és biztonságos utazási élményt nyújtsunk minden utasunknak. Modern járműparkunkat folyamatosan karbantartjuk és korszerűsítjük, hogy mindig a legjobb minőséget biztosíthassuk.
+    Sofőrjeink tapasztaltak és udvariasak, így Ön mindig jó kezekben van. Szolgáltatásaink között szerepelnek menetrend szerinti járatok, csoportos kirándulások, egyéni utazások és különjáratok bármilyen eseményre.
+  </p>
+  <p [ngClass]="{'premium': premiumUserService.loggedInUser.isPremium}" appSelect>
+    Rugalmas utazási megoldásainkkal igyekszünk minden igényt kielégíteni.
+    Online foglalási rendszerünk egyszerű és gyors, így percek alatt lefoglalhatja helyét bármelyik járatunkra.
+    Cégünk nagy hangsúlyt fektet a fenntarthatóságra, ezért flottánk egyre több környezetbarát járművel bővül.
+    Utasaink kényelmét szolgálják modern autóbuszaink extra kényelmi funkciói, mint például a Wi-Fi, a légkondicionálás és a kényelmes ülések.
+  </p>
+  <p [ngClass]="{'premium': premiumUserService.loggedInUser.isPremium}" appSelect>
+    Büszkék vagyunk arra, hogy utasaink visszatérő elégedettsége és pozitív visszajelzései is igazolják elkötelezettségünket.
+    Áraink versenyképesek, így mindenki számára elérhetővé tesszük a minőségi utazás élményét. Különleges ajánlatainkkal és akcióinkkal igyekszünk még vonzóbbá tenni szolgáltatásainkat.
+    Ha szeretné felfedezni Magyarország és Európa legszebb helyeit, válassza a HolnapUtazom busztársaságot! Kollégáink készséggel állnak rendelkezésére bármilyen kérdéssel vagy különleges kéréssel kapcsolatban.
+  </p>
+  <p [ngClass]="{'premium': premiumUserService.loggedInUser.isPremium}" appSelect>
+    Reméljük, hogy hamarosan Ön is utasaink között üdvözölhetjük, és együtt fedezhetjük fel az utazás örömét!
+  </p>
+</div>
+<mat-progress-bar mode="query"></mat-progress-bar>
+<mat-list class="divider center">
+  <mat-list-item>Ajánlott járataink</mat-list-item>
+  <mat-divider></mat-divider>
+  <mat-list-item>Nyíregyháza - Nagykanizsa</mat-list-item>
+  <mat-divider></mat-divider>
+  <mat-list-item>Szeged - Győr</mat-list-item>
+  <mat-divider></mat-divider>
+  <mat-list-item>Pécs - Szeged</mat-list-item>
+  <mat-divider></mat-divider>
+  <mat-list-item>Sopron - Kaposvár</mat-list-item>
+  <mat-divider></mat-divider>
+  <mat-list-item>Sopron - Budapest</mat-list-item>
+</mat-list>
+<mat-progress-bar mode="query"></mat-progress-bar>
+<mat-card class="divider center">
+  <mat-card-header>
+    <mat-card-title>Leghosszabb járat:</mat-card-title>
+    <mat-card-subtitle>Nyíregyháza-Zalaegerszeg</mat-card-subtitle>
+  </mat-card-header>
+</mat-card>

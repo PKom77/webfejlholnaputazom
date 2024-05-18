@@ -1,0 +1,21 @@
+<h3 class="center" [ngClass]="{'premium': premiumUserService.loggedInUser.isPremium}" >Jegyeim</h3>
+<table>
+  <thead>
+    <tr>
+      <th class="center" [ngClass]="{'premium': premiumUserService.loggedInUser.isPremium}">Indulás</th>
+      <th class="center" [ngClass]="{'premium': premiumUserService.loggedInUser.isPremium}">Honnan</th>
+      <th class="center" [ngClass]="{'premium': premiumUserService.loggedInUser.isPremium}">Hova</th>
+      <th class="center" [ngClass]="{'premium': premiumUserService.loggedInUser.isPremium}">Jegyek</th>
+      <th class="center"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let utazas of jegyek">
+      <td [ngClass]="{'premium': premiumUserService.loggedInUser.isPremium}">{{ utazas.indul }}</td>
+      <td [ngClass]="{'premium': premiumUserService.loggedInUser.isPremium}">{{ utazas.honnan }}</td>
+      <td [ngClass]="{'premium': premiumUserService.loggedInUser.isPremium}">{{ utazas.hova }}</td>
+      <td [ngClass]="{'premium': premiumUserService.loggedInUser.isPremium}">{{ utazas.darab }}</td>
+      <td><button [routerLink]="'/tickets/view/' + utazas.indul +','+ utazas.honnan+','+utazas.hova+','+utazas.darab+','+utazas.ar">Beváltás</button></td>
+    </tr>
+  </tbody>
+</table>

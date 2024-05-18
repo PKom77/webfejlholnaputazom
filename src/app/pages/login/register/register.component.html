@@ -1,0 +1,21 @@
+<h3 class="center">Regisztráció</h3>
+<p *ngIf="unsuccess" class="center warning">Nincs minden adat megadva!</p>
+<mat-spinner  *ngIf="unsuccess"  class="center"></mat-spinner>
+<div class="center login">
+  <form [formGroup]="registerForm" (ngSubmit)="register()">
+    <div><label for="name">Név</label><input type="text" formControlName="name" /></div>
+    <div><label for="email">Email</label><input type="text" formControlName="email" /></div>
+    <div>
+      <label for="city">Város</label>
+      <select type="text" formControlName="city">
+        <option *ngFor="let option of options" [value]="option">{{ option }}</option>
+      </select>
+    </div>
+    <div><label for="password">Jelszó</label><input type="password" formControlName="password" /></div>
+    <div><label for="passwordagain">Jelszó újra</label><input type="password" formControlName="passwordagain" /></div>
+    <div>
+      <button type="submit">Regisztráció</button>
+      <button [routerLink]="'/login'">Mégse</button>
+    </div>
+  </form>
+</div>
